@@ -1,0 +1,348 @@
+package com.ucv.aplicativotecnicas.code;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+/**
+ *
+ * @author USER
+ */
+public class SIEOL extends javax.swing.JFrame {
+
+    /**
+     * Creates new form SIEOL
+     */
+    public SIEOL() {
+        initComponents();
+
+        // Agregar ActionListener al JComboBox
+        jComboBox1.addActionListener((ActionEvent e) -> {
+            // Obtener el index seleccionado y mostrarlo marcar las casillas
+            int indexSelected = jComboBox1.getSelectedIndex();
+            evaluarObra(indexSelected);
+        });
+    }
+    
+    public void evaluarObra(int index){
+        switch (index) {
+            case 1 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(false);
+                obstruccionesCheckbox.setSelected(false);
+                aptosCheckbox.setSelected(false);
+            }
+            case 2 -> {
+                seguridadCheckbox.setSelected(false);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(false);
+            }
+            case 3 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(false);
+                obstruccionesCheckbox.setSelected(false);
+                aptosCheckbox.setSelected(true);
+            }
+            case 4 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(false);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(true);
+            }
+            case 5 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(true);
+            }
+            case 6 -> {
+                seguridadCheckbox.setSelected(false);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(true);
+            }
+            case 7 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(false);
+                aptosCheckbox.setSelected(true);
+            }
+            case 8 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(true);
+            }
+            case 9 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(true);
+            }
+            case 10 -> {
+                seguridadCheckbox.setSelected(false);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(false);
+                aptosCheckbox.setSelected(true);
+            }
+            case 11 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(false);
+            }
+            case 12 -> {
+                seguridadCheckbox.setSelected(false);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(true);
+            }
+            case 13 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(false);
+                aptosCheckbox.setSelected(true);
+            }
+            case 14 -> {
+                seguridadCheckbox.setSelected(false);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(true);
+            }
+            case 15 -> {
+                seguridadCheckbox.setSelected(true);
+                almacenamientoCheckbox.setSelected(true);
+                obstruccionesCheckbox.setSelected(true);
+                aptosCheckbox.setSelected(true);
+            }
+            default -> {
+                seguridadCheckbox.setSelected(false);
+                almacenamientoCheckbox.setSelected(false);
+                obstruccionesCheckbox.setSelected(false);
+                aptosCheckbox.setSelected(false);
+            }
+        }
+    }
+    
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        aptosCheckbox = new javax.swing.JCheckBox();
+        seguridadCheckbox = new javax.swing.JCheckBox();
+        almacenamientoCheckbox = new javax.swing.JCheckBox();
+        obstruccionesCheckbox = new javax.swing.JCheckBox();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        resultadoTextArea = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("OBRA:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE", "[OBRA 1] - Vivienda Multifamiliar De Cuatro Niveles", "[OBRA 2] - Construcción De Vivienda Multifamiliar", "[OBRA 3] - Mejoramiento De Pistas Y Veredas", "[OBRA 4] - Ejecución De Obra Construcción", "[OBRA 5] - Mejoramiento E Implementación De La Casa De La Cultura", "[OBRA 6] - Mejoramiento De Señalización Vial Y Control Del Tráfico", "[OBRA 7] - Remodelación Del Parque Del Bombero", "[OBRA 8] - Rehabilitación De Veredas", "[OBRA 9] - Mejoramiento Y Ampliación De Los Servicios Del Centro Integral De Atención Al Adulto Mayor", "[OBRA 10] - Rehabilitación De Pistas Y  Veredas De La Av. Jose Leal Y Bernardo Alcedo", "[OBRA 11] - Renovación De Cerco Perimétrico Y Construcción De Planta Del Vivero Municipal", "[OBRA 12] - Ejecución De Residencial Multifamiliar", "[OBRA 13] - Vaciado De Techo De Losa Aligerada En Vivienda Unifamiliar", "[OBRA 14] - Construcción De Vivienda Unifamiliar De 2 Niveles", "[OBRA 15] - Mejoramiento De Vías En La Av. Arequipa." }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 730, 40));
+
+        aptosCheckbox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        aptosCheckbox.setText("Los elementos se encuentran aptos para utilizarlos");
+        jPanel1.add(aptosCheckbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 350, 30));
+
+        seguridadCheckbox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        seguridadCheckbox.setText("Cuenta con equipamiento de seguridad");
+        jPanel1.add(seguridadCheckbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 310, 30));
+
+        almacenamientoCheckbox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        almacenamientoCheckbox.setText("Existe orden en el almacenamiento de los material");
+        jPanel1.add(almacenamientoCheckbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 340, 30));
+
+        obstruccionesCheckbox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        obstruccionesCheckbox.setText("Existen obstrucciones en las zonas de desplazamientos");
+        jPanel1.add(obstruccionesCheckbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 380, 30));
+
+        jLabel2.setFont(new java.awt.Font("Castellar", 3, 18)); // NOI18N
+        jLabel2.setText("Aplicativo de Seguridad de Obras");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        resultadoTextArea.setColumns(20);
+        resultadoTextArea.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        resultadoTextArea.setRows(5);
+        jScrollPane1.setViewportView(resultadoTextArea);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 730, 270));
+
+        jButton1.setText("EVALUAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 270, 110, 40));
+
+        jButton2.setText("EVALUAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 270, 110, 40));
+
+        jButton3.setText("SALIR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 630, -1, -1));
+
+        jButton4.setText("LIMPIAR");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 630, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 680));
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String obraSeleccionada = (String) jComboBox1.getSelectedItem();
+        if (obraSeleccionada.equals("SELECCIONE")) {
+            resultadoTextArea.setText("No hay ninguna obra que se pueda evaluar, por favor seleccione una.");
+            return;
+        }
+        String numObra = obraSeleccionada.split("-")[0].strip();
+        String obra = obraSeleccionada.split("-")[1].strip();
+        
+        boolean condicionesSeguridad = seguridadCheckbox.isSelected();
+        boolean ordenAlmacenamiento = almacenamientoCheckbox.isSelected();
+        boolean obstruccionZonas = obstruccionesCheckbox.isSelected();
+        boolean implementosAptos = aptosCheckbox.isSelected();
+        
+        boolean resultadoFinal = condicionesSeguridad && !obstruccionZonas && ordenAlmacenamiento && implementosAptos; // Mientras cumpla los 3 requisitos la obra sera aceptable
+        resultadoTextArea.setText(numObra + ": " + obra + "\n\n");
+        resultadoTextArea.append("Cuenta con equipamiento de seguridad: ");
+        if (condicionesSeguridad) 
+            resultadoTextArea.append("Si\n");
+        else
+            resultadoTextArea.append("No\n");
+        
+        resultadoTextArea.append("Existe orden en el almacenamiento de los material: ");
+        if (ordenAlmacenamiento) 
+            resultadoTextArea.append("Si\n");
+        else
+            resultadoTextArea.append("No\n");
+        
+        resultadoTextArea.append("Existen obstrucciones en las zonas de desplazamientos: ");
+        if (obstruccionZonas) 
+            resultadoTextArea.append("Si\n");
+        else
+            resultadoTextArea.append("No\n");
+        
+        resultadoTextArea.append("Los elementos se encuentran aptos para utilizarlos: ");
+        if (implementosAptos) 
+            resultadoTextArea.append("Si\n");
+        else
+            resultadoTextArea.append("No\n");
+        
+        resultadoTextArea.append("\nResultado:\n");
+        if (resultadoFinal) {
+            resultadoTextArea.append("La obra es aceptable.");
+        } else {
+            resultadoTextArea.append("La obra no cumple con todos los requisitos.");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        limpiarCampos();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    public void limpiarCampos() {
+        seguridadCheckbox.setSelected(false);
+        almacenamientoCheckbox.setSelected(false);
+        obstruccionesCheckbox.setSelected(false);
+        aptosCheckbox.setSelected(false);
+        
+        resultadoTextArea.setText("");
+        jComboBox1.setSelectedIndex(0);
+    }
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(SIEOL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(SIEOL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(SIEOL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(SIEOL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new SIEOL().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox almacenamientoCheckbox;
+    private javax.swing.JCheckBox aptosCheckbox;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBox obstruccionesCheckbox;
+    private javax.swing.JTextArea resultadoTextArea;
+    private javax.swing.JCheckBox seguridadCheckbox;
+    // End of variables declaration//GEN-END:variables
+}
